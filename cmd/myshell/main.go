@@ -4,18 +4,14 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func handleInputs(input string) {
+	input = strings.Trim(input, "\n")
 	switch input {
-	case "nonexisting\n":
-		fmt.Fprint(os.Stdout, "nonexistent: command not found\n")
-	case "invalid_command_1":
-		fmt.Fprint(os.Stdout, "invalid_command_1: command not found\n")
-	case "invalid_command_2":
-		fmt.Fprint(os.Stdout, "invalid_command_2: command not found\n")
-	case "invalid_command_3":
-		fmt.Fprint(os.Stdout, "invalid_command_3: command not found\n")
+	default:
+		fmt.Fprintf(os.Stdout, "%s: command not found\n", input)
 	}
 }
 
