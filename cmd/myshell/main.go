@@ -10,9 +10,8 @@ import (
 func handleInputs(input string) {
 	input = strings.Trim(input, "\n")
 	switch input {
-	case "exit":
-		fmt.Fprintf(os.Stdout, "%s: 0\n", input)
-		return
+	case "exit 0":
+		os.Exit(0)
 	default:
 		fmt.Fprintf(os.Stdout, "%s: command not found\n", input)
 	}
